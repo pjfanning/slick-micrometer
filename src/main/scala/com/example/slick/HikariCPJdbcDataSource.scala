@@ -25,7 +25,6 @@ class HikariCPJdbcDataSource(val ds: HikariDataSource, val hconf: HikariConfig)
 }
 
 object HikariCPJdbcDataSource extends JdbcDataSourceFactory {
-  import com.zaxxer.hikari._
 
   def forConfig(c: Config, driver: Driver, name: String, classLoader: ClassLoader): HikariCPJdbcDataSource = {
     val hconf = new HikariConfig()
